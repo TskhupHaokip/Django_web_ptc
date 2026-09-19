@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .movie import Movies
 
-# Create your views here.
+def home(request):
+
+    return render(request,"home.html",{"movies":Movies})

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My App{% endblock %}</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+    <div class="topbar">
+        <nav>
+            <a href="/">Home</a>
+            <a href="">Favourite</a>
+            <a href="">Movies</a>
+            <a href="">Tv-Shows</a>
+        </nav>
+        <form class="search-box">
+        <input type="search" name="q" placeholder="Search movies...">
+        <button type="submit">Search</button>
+        </form>
+            
+    </div>
+        
+
+    <main class="main-body">
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+</body>
+</html>
