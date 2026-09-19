@@ -5,6 +5,7 @@
 {% load static %}
 
 {% block css %}
+
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
 
@@ -12,63 +13,70 @@
 
 <div class="main">
 
-    {% if movies %}
+
+{% if movies %}
+
+    <div class="movie-grid">
 
         {% for movie in movies %}
 
-        <article class="movie-card">
+            <article class="movie-card">
 
-            <div class="movie-details">
+                <div class="movie-details">
 
-                <h1>{{ movie.title }}</h1>
+                    <h1>{{ movie.title }}</h1>
 
-                <div class="movie-meta">
-                    <span>{{ movie.year }}</span>
-                    <span>⭐ {{ movie.rating }}</span>
-                    <span>Action</span>
-                    <span>2h 15m</span>
+                    <div class="movie-meta">
+                        <span>{{ movie.year }}</span>
+                        <span>⭐ {{ movie.rating }}</span>
+                        <span>Action</span>
+                        <span>2h 15m</span>
+                    </div>
+
+                    <p class="movie-description">
+                        A great movie description will appear here when we
+                        connect the TMDB API.
+                    </p>
+
+                    <div class="movie-actions">
+
+                        <button type="button" class="watch-btn">
+                            ▶ Watch Trailer
+                        </button>
+
+                        <button type="button" class="favourite-btn">
+                            ❤️
+                        </button>
+
+                    </div>
+
                 </div>
 
-                <p class="movie-description">
-                    A great movie description will appear here when we
-                    connect the TMDB API.
-                </p>
+                <div class="movie-poster">
 
-                <div class="movie-actions">
-                    <button type="button" class="watch-btn">
-                        ▶ Watch Trailer
+                    <img
+                        src="{{ movie.poster }}"
+                        alt="{{ movie.title }}"
+                    >
+
+                    <button class="poster-play" type="button">
+                        ▶
                     </button>
 
-                    <button type="button" class="favourite-btn">
-                        ❤️
-                    </button>
                 </div>
 
-            </div>
-
-
-            <div class="movie-poster">
-
-                <img
-                    src="{{ movie.poster }}"
-                    alt="{{ movie.title }}"
-                >
-
-                <button class="poster-play" type="button">
-                    ▶
-                </button>
-
-            </div>
-
-        </article>
+            </article>
 
         {% endfor %}
 
-    {% else %}
+    </div>
 
-        <h1>Error Loading Movies</h1>
+{% else %}
 
-    {% endif %}
+    <h1>Error Loading Movies</h1>
+
+{% endif %}
+
 
 </div>
 
