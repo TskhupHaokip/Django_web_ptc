@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Subscription{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/subscription.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="subscription-page">
+
+    <!-- Current Subscription -->
+    <section class="current-plan">
+
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">Subscription</span>
+                <h1>Your current plan</h1>
+            </div>
+
+            {% if subs %}
+                <span class="status active">Active</span>
+            {% else %}
+                <span class="status">No plan</span>
+            {% endif %}
+        </div>
+
+
+        <div class="current-plan-body">
+
+            {% if subs %}
+
+                <div>
+                    <h2>{{ subs.plan }}</h2>
+                    <p>You're currently enjoying your {{ subs.plan }} features.</p>
+                </div>
+
+                <div class="plan-details">
+                    <div class="timing">
+                        <div>
+                            Created at: {{ subs.created_at }}
+                        </div>
+
+                        <div
+                            id="countdown"
+                            data-expires="{{ subs.expires_at|date:'c' }}"
+                        >
+                            Expires in: calculating...
+                        </div>
+                    </div>
+                    <div>
+                        <span>Billing</span>
+                        <strong>{{ subs.billing }}</strong>
+                    </div>
+
+                    <div>
+                        <span>Next billing</span>
+                        <strong>{{ subs.next_billing }}</strong>
+                    </div>
+
+                </div>
+
+            {% else %}
+
+                <div>
+                    <h2>Free</h2>
+                    <p>You don't have an active subscription yet.</p>
+                </div>
+
+                <div class="plan-details">
+
+                    <div>
+                        <span>Billing</span>
+                        <strong>Free</strong>
+                    </div>
+
+                    <div>
+                        <span>Next billing</span>
+                        <strong>—</strong>
+                    </div>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </section>
+
+
+    <!-- Upgrade Plans -->
+    <section class="upgrade-section">
+
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">Plans</span>
+                <h1>Upgrade your plan</h1>
+                <p>Choose the plan that fits your needs.</p>
+            </div>
+        </div>
+
+
+        <div class="plans">
+
+            <!-- Free -->
+            <article class="plan-card">
+
+                <div class="plan-top">
+                    <span class="plan-name">Free</span>
+
+                    <span class="plan-price">
+                        $0 <small>/ month</small>
+                    </span>
+                </div>
+
+                <p class="plan-description">
+                    For getting started with the basics.
+                </p>
+
+                <ul class="features">
+                    <li>Basic features</li>
+                    <li>Limited projects</li>
+                    <li>Community support</li>
+                </ul>
+
+                {% if not subs %}
+                    <button class="plan-button secondary">
+                        Current plan
+                    </button>
+                {% else %}
+                    <button class="plan-button secondary">
+                        Downgrade
+                    </button>
+                {% endif %}
+
+            </article>
+
+
+            <!-- Pro -->
+            <article class="plan-card featured">
+
+                <div class="popular">Popular</div>
+
+                <div class="plan-top">
+                    <span class="plan-name">Pro</span>
+
+                    <span class="plan-price">
+                        $9 <small>/ month</small>
+                    </span>
+                </div>
+
+                <p class="plan-description">
+                    For users who need more power and flexibility.
+                </p>
+
+                <ul class="features">
+                    <li>Unlimited projects</li>
+                    <li>Advanced features</li>
+                    <li>Priority support</li>
+                </ul>
+
+                {% if subs and subs.plan == "Pro" %}
+                    <button class="plan-button secondary">
+                        Current plan
+                    </button>
+                {% else %}
+                    <button class="plan-button primary">
+                        Upgrade to Pro
+                    </button>
+                {% endif %}
+
+            </article>
+
+
+            <!-- Business -->
+            <article class="plan-card">
+
+                <div class="plan-top">
+                    <span class="plan-name">Business</span>
+
+                    <span class="plan-price">
+                        $19 <small>/ month</small>
+                    </span>
+                </div>
+
+                <p class="plan-description">
+                    For teams and larger projects.
+                </p>
+
+                <ul class="features">
+                    <li>Everything in Pro</li>
+                    <li>Team collaboration</li>
+                    <li>Advanced management</li>
+                </ul>
+
+                <button class="plan-button secondary">
+                    Upgrade
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</div>
+
+{% endblock %}

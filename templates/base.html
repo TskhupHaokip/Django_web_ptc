@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Dj Web Ptc{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block css %} {% endblock %}
+
+</head>
+<body>
+    <div class="topbar">
+        <button id="toggle">☰</button>
+        <h2 id="heading">Login Practice</h2>
+    </div>
+    {% if messages %}
+    <div id="toast" class="toast"> <span id="toast-message">
+        {% for message in messages %}
+           {{ message }}
+        {% endfor %}
+    </span> </div>
+     {% endif %}
+
+    <main class="content">
+        <div class="sidebar">
+            <nav>
+                <a href="/">Home</a>
+                <a href="/login/">Login</a>
+                <a href="/register">Signup</a>
+            </nav>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Global App JS (loaded first) -->
+    {% load static %}
+    <script src="{% static 'js/app.js' %}"></script>
+    <!-- Page-specific JS Block (child templates insert scripts here) -->
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

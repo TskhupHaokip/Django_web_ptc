@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="home">
+    {% if user.is_authenticated %}
+        <header class="welcome">
+            <div>
+                <p class="eyebrow">Dashboard</p>
+                <h1>Welcome back, {{ user.username }}</h1>
+                <p class="subtitle">Manage your account and subscription.</p>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <section class="card subscription-card">
+                <div class="card-header">
+                    <div>
+                        <p class="card-label">Subscription</p>
+                        <h2>Your Plan</h2>
+                    </div>
+
+                    <span class="status active">Active</span>
+                </div>
+
+                <div class="card-content">
+                    <h3>Pro</h3>
+                    <p>Your subscription is currently active.</p>
+                </div>
+
+                <a href="/subscription" class="card-action">
+                    Manage subscription
+                </a>
+            </section>
+
+            <section class="card profile-card">
+                <div class="card-header">
+                    <div>
+                        <p class="card-label">Account</p>
+                        <h2>Profile</h2>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <p class="profile-name">{{ user.username }}</p>
+                    <p>Manage your account information.</p>
+                </div>
+
+                <a href="/users/profile" class="card-action">
+                    View profile
+                </a>
+            </section>
+
+        </main>
+
+    {% else %}
+
+        <section class="guest">
+            <p class="eyebrow">Welcome</p>
+            <h1>Welcome, Guest</h1>
+            <p class="subtitle">
+                Log in to access your dashboard.
+            </p>
+
+            <a href="{% url 'login' %}" class="primary-button">
+                Log in
+            </a>
+        </section>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

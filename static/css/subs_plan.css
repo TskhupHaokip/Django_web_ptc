@@ -1,0 +1,20 @@
+body {
+        background: #15121c;
+        color: #f1edf7;
+    }
+
+    .card {
+        background: #241d30;
+        color: #f1edf7;
+        border: 1px solid #3d3150;
+    }
+
+    .text-muted {
+        color: #aaa0b8 !important;
+    }
+
+    .list-group-item {
+        background: #2d2439;
+        color: #eee8f5;
+        border-color: #433650;
+    }

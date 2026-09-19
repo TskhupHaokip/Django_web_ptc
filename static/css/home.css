@@ -1,0 +1,151 @@
+body {
+    color: #E8E6F0;
+}
+
+h1, h2, h3 {
+    color: #F4F1FA;
+}
+
+p {
+    color: #B8B4C7;
+}
+
+.card-label,
+.eyebrow {
+    color: #A9A3BA;
+}
+
+.card-action {
+    color: #C49BEA;
+}
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.home {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 32px;
+}
+
+.welcome {
+    margin-bottom: 36px;
+}
+
+.eyebrow,
+.card-label {
+    margin: 0 0 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.65;
+}
+
+.welcome h1,
+.guest h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.subtitle {
+    margin-top: 10px;
+    opacity: 0.65;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.card {
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background: #213044;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+.card-content {
+    margin: 32px 0;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.card-content p {
+    opacity: 0.65;
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.status {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status.active {
+    background: rgba(123, 66, 188, 0.2);
+    color: #c49bea;
+}
+
+.card-action {
+    display: inline-block;
+    color: #c49bea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card-action:hover {
+    text-decoration: underline;
+}
+
+.guest {
+    max-width: 600px;
+    padding: 80px 0;
+}
+
+.primary-button {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 11px 20px;
+    border-radius: 8px;
+    background: #7B42BC;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .home {
+        padding: 32px 20px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+

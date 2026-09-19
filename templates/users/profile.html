@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="profile-box">
+
+    <div class="profile-header">
+        <div class="profile-avatar">
+            {{ user.username|first|upper }}
+        </div>
+
+        <div>
+            <h1>{{ user.username }}</h1>
+            <p>Profile</p>
+        </div>
+    </div>
+
+    <div class="profile-info">
+
+        <div class="info-item">
+            <span class="label">Username</span>
+            <span class="value">{{ user.username }}</span>
+        </div>
+
+        <div class="info-item">
+            <span class="label">Email</span>
+            <span class="value">{{ user.email }}</span>
+        </div>
+
+        <div class="info-item">
+            <span class="label">Joined</span>
+            <span class="value">{{ user.date_joined|date:"F d, Y" }}</span>
+        </div>
+
+    </div>
+
+    <div class="profile-actions">
+        <a href="#" class="edit-btn">Edit Profile</a>
+
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="logout-btn">Logout</button>
+        </form>
+    </div>
+
+</div>
+
+{% else %}
+
+<div class="login-message">
+    <h2>Please Login First</h2>
+</div>
+
+{% endif %}
+
+{% endblock %}
+
