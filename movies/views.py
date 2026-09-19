@@ -1,6 +1,10 @@
 from django.shortcuts import render
-from .movie import Movies
+from .tmdb_client import ApiClient
 
-def home(request):
+client = ApiClient()
+
+async def home(request):
+    Movies = await client.async_get_movies()
+    print(Movies)
 
     return render(request,"home.html",{"movies":Movies})

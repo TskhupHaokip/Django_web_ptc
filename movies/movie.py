@@ -1,3 +1,5 @@
+
+
 class Movie:
     def __init__(self, title, poster, rating, year):
         self.title = title
