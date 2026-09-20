@@ -1,0 +1,81 @@
+```gitignore
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Django
+# =========================
+
+*.log
+db.sqlite3
+db.sqlite3-journal
+
+# Media / uploaded files
+media/
+
+# Collected static files
+staticfiles/
+
+# =========================
+# Environment / Secrets
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# =========================
+# IDE
+# =========================
+
+.idea/
+.vscode/
+
+# =========================
+# OS
+# =========================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# =========================
+# Testing / Coverage
+# =========================
+
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# =========================
+# Build / Distribution
+# =========================
+
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Jupyter
+# =========================
+
+.ipynb_checkpoints/
+
