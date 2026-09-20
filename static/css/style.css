@@ -1,23 +1,56 @@
+#greeting {
+    background: linear-gradient(90deg, #a78bfa, #60a5fa) !important;
+    background-clip: text;
+    color: transparent;
+}
+
+
 #send-btn {
     width: 65px;
     border-radius: 13px;
     margin: 5px;
     font-size: 35px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #7B42BC, #3B5BDB) !important;
+    align-self: center;
 }
+
 #send-btn:hover {
-    background-color: #456666 !important;
+    background: linear-gradient(135deg, #8E5AC7, #4C6FFF) !important;
+    transform: translateY(-2px);
 }
 
 #chat-form {
-    margin: 5px;
+    background-color: transparent;
+    
 }
 
 #chat-form textarea {
     margin: 5px;
     border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    color: rgb(191, 222, 244);
+    font-weight: bold;
     field-sizing: content;
     max-height: 120px;
     resize: none;
+    background: linear-gradient(135deg, #7B42BC, #3B5BDB) !important;
+    
+}
 
+#chatInput::placeholder {
+    color: #edf1f7;
+    opacity: 1;
+}
+#chat-form textarea:hover {
+    background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 50%, #2563EB 100%) !important;
+    transform: translateY(-2px);
+}
+
+.bubbles {
+    /* background: linear-gradient(135deg, #351A5E, #213044); */
+    background: linear-gradient(135deg, #5b2a86, #2948a3);
+    color: #fff;
 }
 

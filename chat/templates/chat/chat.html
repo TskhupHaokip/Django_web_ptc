@@ -4,11 +4,11 @@
 {% block content %}
 <div class="d-flex flex-column vh-100 bg-primary">
     <!-- Greeting -->
-    <div class="d-flex justify-content-center bg-secondary">
-        <h1>Hi! 🤖 How can I help You Today?</h1>
+    <div id="greeting" class="d-flex justify-content-center align-items-center bg-secondary">
+        <h3 class="text-white m-1">Hi! 🤖 How can I help You Today?</h3>
     </div>
 
-    <div class="bubbles bg-danger-subtle flex-grow-1">
+    <div class="bubbles bg-body-tertiary flex-grow-1 overflow-y-auto ">
         <div class="ai p-1">
             <p>Ai ! This Is Ai</p>
 
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <form class="d-flex p-0 gap-2" id="chat-form">
+    <form class="d-flex p-0 gap-1" id="chat-form">
         <textarea
             id="chatInput"
             class="form-control"
