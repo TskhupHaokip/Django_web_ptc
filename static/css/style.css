@@ -4,7 +4,6 @@
     color: transparent;
 }
 
-
 #send-btn {
     width: 65px;
     border-radius: 13px;
@@ -54,3 +53,25 @@
     color: #fff;
 }
 
+.ai {
+    max-width: 85%;
+    padding: 10px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #351A5E, #213044);
+    color: #fff;
+    margin: 10px;
+}
+
+.user {
+    max-width: 85%;
+    margin: 5px ;
+    padding: 12px 16px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #7C3AED, #2563EB);
+    color: #fff;
+    
+}
+.ai p,.user p {
+    padding: 5px;
+}
+   
