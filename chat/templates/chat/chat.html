@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Chat{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column vh-100 bg-primary">
+    <!-- Greeting -->
+    <div class="d-flex justify-content-center bg-secondary">
+        <h1>Hi! 🤖 How can I help You Today?</h1>
+    </div>
+
+    <div class="bubbles bg-danger-subtle flex-grow-1">
+        <div class="ai p-1">
+            <p>Ai ! This Is Ai</p>
+
+        </div>
+        <div class="user p-1">
+            <p>User ! This Is User</p>
+
+        </div>
+    </div>
+
+    <form class="d-flex p-0 gap-2" id="chat-form">
+        <textarea
+            id="chatInput"
+            class="form-control"
+            rows="1"
+            placeholder="Ask KAI..."
+        ></textarea>
+
+        <button
+            class="btn fs-5 bg-dark-subtle"
+            id="send-btn"
+            type="submit"
+            class="btn btn-primary"
+        >
+            ➤
+        </button>
+    </form>
+    
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+#send-btn {
+    width: 65px;
+    border-radius: 13px;
+    margin: 5px;
+    font-size: 35px;
+}
+#send-btn:hover {
+    background-color: #456666 !important;
+}
+
+#chat-form {
+    margin: 5px;
+}
+
+#chat-form textarea {
+    margin: 5px;
+    border-radius: 15px;
+    field-sizing: content;
+    max-height: 120px;
+    resize: none;
+
+}
+
