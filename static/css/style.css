@@ -37,7 +37,7 @@ body {
         135deg,
         #08080b,
         #120d1c,
-        #1b1030
+        #0c0715
     );
     
 }
@@ -75,15 +75,16 @@ nav a:hover {
     background-color: transparent;
     gap: 5px;
     border-radius: 5px;
+    margin: 5px;
 }
 
 .search-box input {
     /* border: none;
     outline: none; */
+    border-color: aqua;
 
     background: transparent;
     color: white;
-
     padding: 8px 10px;
 }
 

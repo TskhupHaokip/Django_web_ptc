@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Favourites{% endblock %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/favourites.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="favs-box">
+        {% if favourites %}
+        {% for movie in favourites %}
+            {% include "movie_card.html" %}
+        {% endfor %}
+    {% else %}
+        <div class="no-movies">
+            <h2>No Favourites yet </h2>
+            <p>Add Favourite Sp That It Will Appear Here.</p>
+            <a href="/">Browse popular movies</a>
+        </div>
+    {% endif%}
+
+    </div>
+    
+{% endblock %}

@@ -15,22 +15,22 @@
     <div class="topbar">
         <nav>
             <a href="/">Home</a>
-            <a href="">Favourite</a>
+            <a href="/favourites">Favourite</a>
             <a href="">Movies</a>
             <a href="">Tv-Shows</a>
         </nav>
         <form class="search-box">
-        <input type="search" name="q" placeholder="Search movies...">
+        <input type="search" name="q" id="search-input" placeholder="Search movies...">
         <button type="submit">Search</button>
         </form>
             
     </div>
         
-
     <main class="main-body">
         {% block content %}
         {% endblock %}
     </main>
-    
+    {% load static %}
+    <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>
