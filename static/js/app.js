@@ -2,6 +2,9 @@ const input = document.getElementById("chatInput");
 const form = document.getElementById("chat-form");
 const messages = document.querySelector(".bubbles");
 
+
+const thinking = document.querySelector(".thinking-container")
+
 const add_message = (sender, message) => {
     const bubble = document.createElement("div");
 
@@ -16,6 +19,7 @@ const add_message = (sender, message) => {
     }
 
     messages.appendChild(bubble);
+    bubble.appendChild(thinking)
 
     return bubble;
 };
@@ -42,7 +46,8 @@ if (input) {
 
             
             // Create one AI bubble
-            const aiBubble = add_message("ai", "Thinking...");
+            const aiBubble = add_message("ai", "                              ");
+            thinking.classList.add("show")
             aiBubble.classList.add("thinking");
 
             // Send message to Django
@@ -63,6 +68,7 @@ if (input) {
             const stop_thinking = () => {
                 aiBubble.textContent = "";
                 aiBubble.style.animation = "none";
+                thinking.classList.remove("show")
             };
 
             // Stream Gemini response
