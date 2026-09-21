@@ -40,6 +40,11 @@ if (input) {
             const formData = new FormData(form);
             input.value = "";
 
+            
+            // Create one AI bubble
+            const aiBubble = add_message("ai", "Thinking...");
+            aiBubble.classList.add("thinking");
+
             // Send message to Django
             const response = await fetch(
                 form.action || window.location.href,
@@ -49,24 +54,23 @@ if (input) {
                 }
             );
            
-            
+
             // Read streaming response
-            const reader = response.body.getReader();
-            const streamStart = performance.now();
-                  
+            const reader = response.body.getReader();      
             const decoder = new TextDecoder();
 
             let aiText = "";
-
-            // Create one AI bubble
-            const aiBubble = add_message("ai", "");
-            
+            const stop_thinking = () => {
+                aiBubble.textContent = "";
+                aiBubble.style.animation = "none";
+            };
 
             // Stream Gemini response
             while (true) {
                 const { value, done } = await reader.read();
 
                 if (done) break;
+                stop_thinking()
 
                 aiText += decoder.decode(value, {
                     stream: true
