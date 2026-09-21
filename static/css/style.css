@@ -55,7 +55,6 @@
 
 .ai {
     max-width: 85%;
-    padding: 10px;
     border-radius: 16px;
     background: linear-gradient(135deg, #351A5E, #213044);
     color: #fff;
@@ -65,13 +64,22 @@
 .user {
     max-width: 85%;
     margin: 5px ;
-    padding: 12px 16px;
     border-radius: 16px;
     background: linear-gradient(135deg, #7C3AED, #2563EB);
     color: #c1cde1;
     
 }
+
+.ai,
+.user {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+   
+
+} 
+/* 
 .ai p,.user p {
     padding: 5px;
-}
+
+} */
    
