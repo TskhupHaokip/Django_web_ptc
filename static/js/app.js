@@ -48,36 +48,25 @@ if (input) {
                     body: formData,
                 }
             );
-            console.log(
-                    "Fetch response arrived:",
-                    ((performance.now() - requestStart) / 1000).toFixed(2)
-                );
-
+           
+            
             // Read streaming response
             const reader = response.body.getReader();
             const streamStart = performance.now();
-                    console.log(
-            "Chunk received:",
-            ((performance.now() - streamStart) / 1000).toFixed(2)
-        );
+                  
             const decoder = new TextDecoder();
 
             let aiText = "";
 
             // Create one AI bubble
             const aiBubble = add_message("ai", "");
-            const start = performance.now();
+            
 
             // Stream Gemini response
             while (true) {
                 const { value, done } = await reader.read();
 
                 if (done) break;
-
-                console.log(
-                    "Chunk received:",
-                    ((performance.now() - start) / 1000).toFixed(2)
-                );
 
                 aiText += decoder.decode(value, {
                     stream: true
