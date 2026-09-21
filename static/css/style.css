@@ -72,11 +72,16 @@
 
 .ai,
 .user {
-    white-space: pre-wrap;
+    /* white-space: pre-wrap; */
     overflow-wrap: anywhere;
-   
+    
 
 } 
+
+
+.ai p,.user p {
+    margin: 5px !important;
+}
 
 .code-block {
     width: 100%;
@@ -125,4 +130,98 @@
     overflow-x: auto;
     white-space: pre;
 }
-   
+
+/* try out padding */
+
+/* Markdown content inside AI messages */
+
+/* =========================
+   AI Markdown spacing
+   ========================= */
+
+.ai p,
+.ai ul,
+.ai ol,
+.ai h1,
+.ai h2,
+.ai h3,
+.ai h4,
+.ai h5,
+.ai h6,
+.ai blockquote,
+.ai pre,
+.ai table,
+.ai hr {
+    margin-top: 0 !important;
+}
+
+
+/* Paragraphs */
+.ai p {
+    margin-bottom: 5px !important;
+}
+
+
+/* Lists */
+.ai ul,
+.ai ol {
+    margin-bottom: 0.75rem !important;
+    padding-left: 1.5rem !important;
+}
+
+.ai li {
+    margin-bottom: 0.25rem !important;
+}
+
+
+/* Headings */
+.ai h1,
+.ai h2,
+.ai h3,
+.ai h4,
+.ai h5,
+.ai h6 {
+    margin-bottom: 0.75rem !important;
+}
+
+
+/* Blockquote */
+.ai blockquote {
+    margin-bottom: 0.75rem !important;
+    padding-left: 1rem !important;
+}
+
+
+/* Horizontal line */
+.ai hr {
+    margin-bottom: 0.75rem !important;
+}
+
+
+/* Tables */
+.ai table {
+    margin-bottom: 0.75rem !important;
+}
+
+
+/* Code block */
+.ai pre {
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+    padding: 0 !important;
+}
+
+
+/* Inline code */
+.ai code {
+    padding: 0.15rem 0.3rem;
+}
+
+
+/* Fenced code inside <pre> */
+.ai pre code {
+    display: block;
+    padding: 1rem !important;
+    overflow-x: auto;
+    white-space: pre;
+}

@@ -6,10 +6,10 @@ const add_message = (sender, message) => {
     const bubble = document.createElement("div");
 
     if (sender === "user") {
-        bubble.classList.add("user", "p-4", "align-self-end");
+        bubble.classList.add("user", "p-3", "align-self-end");
         bubble.textContent = message;
     } else {
-        bubble.classList.add("ai", "p-4", "align-self-start");
+        bubble.classList.add("ai", "p-3", "align-self-start");
         bubble.innerHTML = DOMPurify.sanitize(
             marked.parse(message)
         );
