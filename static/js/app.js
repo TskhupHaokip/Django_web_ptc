@@ -2,7 +2,6 @@ const input = document.getElementById("chatInput");
 const form = document.getElementById("chat-form");
 const messages = document.querySelector(".bubbles");
 
-
 const thinking = document.querySelector(".thinking-container")
 
 const add_message = (sender, message) => {

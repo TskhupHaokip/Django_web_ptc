@@ -1,134 +1,134 @@
 #greeting {
-    background: linear-gradient(90deg, #a78bfa, #60a5fa) !important;
-    background-clip: text;
-    color: transparent;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa) !important;
+  background-clip: text;
+  color: transparent;
 }
 
 #send-btn {
-    width: 65px;
-    border-radius: 13px;
-    margin: 5px;
-    font-size: 35px;
-    flex-shrink: 0;
-    background: linear-gradient(135deg, #7B42BC, #3B5BDB) !important;
-    align-self: center;
+  width: 65px;
+  border-radius: 13px;
+  margin: 5px;
+  font-size: 35px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #7b42bc, #3b5bdb) !important;
+  align-self: center;
 }
 
 #send-btn:hover {
-    background: linear-gradient(135deg, #8E5AC7, #4C6FFF) !important;
-    transform: translateY(-2px);
+  background: linear-gradient(135deg, #8e5ac7, #4c6fff) !important;
+  transform: translateY(-2px);
 }
 
 #chat-form {
-    background-color: transparent;
-    
+  background-color: transparent;
 }
 
 #chat-form textarea {
-    margin: 5px;
-    border-radius: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 19px;
-    color: rgb(191, 222, 244);
-    font-weight: bold;
-    field-sizing: content;
-    max-height: 120px;
-    resize: none;
-    background: linear-gradient(135deg, #7B42BC, #3B5BDB) !important;
-    
+  margin: 5px;
+  border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  color: rgb(191, 222, 244);
+  font-weight: bold;
+  field-sizing: content;
+  max-height: 120px;
+  resize: none;
+  background: linear-gradient(135deg, #7b42bc, #3b5bdb) !important;
 }
 
 #chatInput::placeholder {
-    color: #edf1f7;
-    opacity: 1;
+  color: #edf1f7;
+  opacity: 1;
 }
 #chat-form textarea:hover {
-    background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 50%, #2563EB 100%) !important;
-    transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    #7c3aed 0%,
+    #4f46e5 50%,
+    #2563eb 100%
+  ) !important;
+  transform: translateY(-2px);
 }
 
 .bubbles {
-    /* background: linear-gradient(135deg, #351A5E, #213044); */
-    background: linear-gradient(135deg, #5b2a86, #2948a3);
-    color: #fff;
+  /* background: linear-gradient(135deg, #351A5E, #213044); */
+  background: linear-gradient(135deg, #5b2a86, #2948a3);
+  color: #fff;
 }
 
 .ai {
-    max-width: 85%;
-    border-radius: 16px;
-    background: linear-gradient(135deg, #351A5E, #213044);
-    color: #fff;
-    margin: 10px;
+  max-width: 85%;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #351a5e, #213044);
+  color: #fff;
+  margin: 10px;
 }
 
 .user {
-    max-width: 85%;
-    margin: 5px ;
-    border-radius: 16px;
-    background: linear-gradient(135deg, #7C3AED, #2563EB);
-    color: #c1cde1;
-    
+  max-width: 85%;
+  margin: 5px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: #c1cde1;
 }
 
 .ai,
 .user {
-    /* white-space: pre-wrap; */
-    overflow-wrap: anywhere;
-    
+  /* white-space: pre-wrap; */
+  overflow-wrap: anywhere;
+}
 
-} 
-
-
-.ai p,.user p {
-    margin: 5px !important;
+.ai p,
+.user p {
+  margin: 5px !important;
 }
 
 .code-block {
-    width: 100%;
-    margin: 1rem 0;
-    border-radius: 10px;
-    overflow: hidden;
-    background: #0d1117;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0d1117;
 }
 
 .code-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 0.75rem;
-    background: #161b22;
-    color: #8b949e;
-    font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  background: #161b22;
+  color: #8b949e;
+  font-size: 0.8rem;
 }
 
 .copy-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 0;
-    background: transparent;
-    color: #8b949e;
-    padding: 0.25rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: #8b949e;
+  padding: 0.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .copy-btn:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .code-block pre {
-    margin: 0;
-    border-radius: 0;
+  margin: 0;
+  border-radius: 0;
 }
 
 .code-block pre code {
-    display: block;
-    padding: 1rem;
-    overflow-x: auto;
-    white-space: pre;
+  display: block;
+  padding: 1rem;
+  overflow-x: auto;
+  white-space: pre;
 }
 
 /* try out padding */
@@ -152,27 +152,24 @@
 .ai pre,
 .ai table,
 .ai hr {
-    margin-top: 0 !important;
+  margin-top: 0 !important;
 }
-
 
 /* Paragraphs */
 .ai p {
-    margin-bottom: 5px !important;
+  margin-bottom: 5px !important;
 }
-
 
 /* Lists */
 .ai ul,
 .ai ol {
-    margin-bottom: 0.75rem !important;
-    padding-left: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+  padding-left: 1.5rem !important;
 }
 
 .ai li {
-    margin-bottom: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
 }
-
 
 /* Headings */
 .ai h1,
@@ -181,62 +178,56 @@
 .ai h4,
 .ai h5,
 .ai h6 {
-    margin-bottom: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
 }
-
 
 /* Blockquote */
 .ai blockquote {
-    margin-bottom: 0.75rem !important;
-    padding-left: 1rem !important;
+  margin-bottom: 0.75rem !important;
+  padding-left: 1rem !important;
 }
-
 
 /* Horizontal line */
 .ai hr {
-    margin-bottom: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
 }
-
 
 /* Tables */
 .ai table {
-    margin-bottom: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
 }
-
 
 /* Code block */
 .ai pre {
-    margin-top: 0.75rem !important;
-    margin-bottom: 0.75rem !important;
-    padding: 0 !important;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+  padding: 0 !important;
 }
-
 
 /* Inline code */
 .ai code {
-    padding: 0.15rem 0.3rem;
+  padding: 0.15rem 0.3rem;
 }
-
 
 /* Fenced code inside <pre> */
 .ai pre code {
-    display: block;
-    padding: 1rem !important;
-    overflow-x: auto;
-    white-space: pre;
+  display: block;
+  padding: 1rem !important;
+  overflow-x: auto;
+  white-space: pre;
 }
 
-
 .thinking {
-    animation: thinking 1s ease-in-out infinite;
+  animation: thinking 1s ease-in-out infinite;
 }
 
 @keyframes thinking {
-    0%, 100% {
-        opacity: 0.4;
-    }
+  0%,
+  100% {
+    opacity: 0.4;
+  }
 
-    50% {
-        opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
 }
